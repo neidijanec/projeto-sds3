@@ -22,12 +22,12 @@ Não se inscreveu ainda? Corre que ainda dá tempo:
 - [Página de inscrição - Semana Spring React](https://devsuperior.com.br/evento-sds3-org)
 
 ## Guias de instalação das ferramentas
-- [Guia de instalação das ferramentas no Windows](https://github.com/devsuperior/sds3/tree/main/_instalacao/windows)
+- [Guia de instalação das ferramentas no Windows](https://github.com/nedijanec/projeto-sds3/tree/master/instalacao.md)
 - [Guia de instalação das ferramentas no Linux](https://github.com/devsuperior/sds3/tree/main/_instalacao/linux)
 - [Guia de instalação das ferramentas no Mac](https://github.com/devsuperior/sds3/tree/main/_instalacao/mac)
 
 ## Materiais de apoio das aulas
-- [Episódio 1](https://github.com/devsuperior/sds3/tree/main/episodio1)
+- [Episódio 1](https://github.com/neidijanec/projeto-sds3/tree/master/episodio1.md)
 - [Episódio 2](https://github.com/devsuperior/sds3/tree/main/episodio2)
 - [Episódio 3](https://github.com/devsuperior/sds3/tree/main/episodio3)
 
