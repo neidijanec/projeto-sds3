@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import { SaleSum } from 'types/sale';
 import { BASE_URL } from 'utils/requests';
@@ -9,30 +10,42 @@ type ChartData={
 }
 
 const DonutChart = () => {
+        //FORMA CERTA
+    const [chartData,setChartData] = useState<ChartData>({labels: [], series: []});
+
     //forma errada de declara variável
-    let chartData : ChartData = { labels: [], series: []};
+   // let chartData : ChartData = { labels: [], series: []};
+
     //forma errada
     //axios.get(`${BASE_URL}/sales/amount-by-seller`)
       //  .then(response => {
         //    console.log(response.data);
        // });
 
-       axios.get(`${BASE_URL}/sales/amount-by-seller`)
-       .then(response => {
+//ainda na FORMA ERRADA pois ta sendo chamada varias vezes
+   //    axios.get(`${BASE_URL}/sales/amount-by-seller`)
+//       .then(response => {
+  //         const data = response.data as SaleSum[];
+    //       const myLabels = data.map(x => x.sellerName);
+      //     const mySeries = data.map(x => x.sum);
+           //forma certa
+        //   setChartData({ labels: myLabels, series: mySeries });
+           //forma errada
+          // chartData = { labels: myLabels, series: mySeries };
+        //   console.log(chartData);
+     //  });
 
-
-           const data = response.data as SaleSum[];
-           const myLabels = data.map(x => x.sellerName);
-           const mySeries = data.map(x => x.sum);
-
-           chartData = { labels: myLabels, series: mySeries }
-
-           console.log(chartData);
-
-
-
-
-       })
+       useEffect(() => {
+        axios.get(`${BASE_URL}/sales/amount-by-seller`)
+        .then(response => {
+            const data = response.data as SaleSum[];
+            const myLabels = data.map(x => x.sellerName);
+            const mySeries = data.map(x => x.sum);
+            setChartData({ labels: myLabels, series: mySeries });
+          //  console.log(chartData); 
+        });
+ 
+       },[]);
 
 
 
